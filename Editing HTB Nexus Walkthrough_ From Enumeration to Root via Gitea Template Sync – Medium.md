@@ -8,7 +8,7 @@ Vulnerability 2: Gitea Template Sync Privilege Escalation
 
 
 Difficulty: Likely Hard/Medium (due to complex local attack path)
-<img width="627" height="723" alt="image" src="https://github.com/user-attachments/assets/9c5045e6-5f54-45f0-a43f-eb3e1e82cc28" />
+<img width="627" height="723" position=middle alt="image" src="https://github.com/user-attachments/assets/9c5045e6-5f54-45f0-a43f-eb3e1e82cc28" />
 
 
 Vulnerability: Gitea Template Sync vulnerability / Local Privilege Escalation via Template Repository Git Hooks.
@@ -18,21 +18,20 @@ Vulnerability: Gitea Template Sync vulnerability / Local Privilege Escalation vi
 Our initial attack vector is a Remote Code Execution (RCE) vulnerability in Krayin CRM. We are provided with a Python exploit script that takes advantage of an insecure file upload endpoint.
 
 The Exploit Mechanism:
-
 As seen in the source code, the script performs the following actions:
 
 
-Visits /admin/login to scrape a CSRF token.
+1-Visits /admin/login to scrape a CSRF token.
 
-Authenticates to the admin panel using the provided credentials.
+2-Authenticates to the admin panel using the provided credentials.
 
-Sends a POST request to /admin/tinymce/upload containing a PHP webshell disguised with a GIF header
+3-Sends a POST request to /admin/tinymce/upload containing a PHP webshell disguised with a GIF header
 
 ( GIF89a ).
 
-Retrieves the location of the uploaded file from the server's JSON response.
+4-Retrieves the location of the uploaded file from the server's JSON response.
 
-Uses curl to pass commands to the webshell via the cmd GET parameter, effectively giving us unauthenticated RCE on the backend.
+5-Uses curl to pass commands to the webshell via the cmd GET parameter, effectively giving us unauthenticated RCE on the backend.
 
 We execute the exploit against http://billing.nexus.htb/ using the discovered initial credentials for
 
