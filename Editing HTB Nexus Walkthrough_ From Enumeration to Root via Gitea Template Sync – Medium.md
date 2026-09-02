@@ -6,7 +6,10 @@ Vulnerability 1: CVE-2026–38526 (Krayin CRM RCE via TinyMCE Upload)
 
 Vulnerability 2: Gitea Template Sync Privilege Escalation
 
+
 Difficulty: Likely Hard/Medium (due to complex local attack path)
+<img width="627" height="723" alt="image" src="https://github.com/user-attachments/assets/9c5045e6-5f54-45f0-a43f-eb3e1e82cc28" />
+
 
 Vulnerability: Gitea Template Sync vulnerability / Local Privilege Escalation via Template Repository Git Hooks.
 
