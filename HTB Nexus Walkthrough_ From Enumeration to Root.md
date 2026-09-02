@@ -1,4 +1,4 @@
-## HTB Nexus Walkthrough: From Enumeration to Root via Gitea Template Sync
+## HTB Nexus Walkthrough: From Enumeration to Root 
 
 Target: Nexus (HTB)
 
