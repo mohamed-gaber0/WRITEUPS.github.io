@@ -2,6 +2,8 @@
 
 **Difficulty:** Medium | **OS:** Linux | **Platform:** HackTheBox
 
+![Bedside Pwn](images/00-Bedside.png)
+
 > This writeup documents the exploitation of *Bedside*, a legal target on the HackTheBox training platform. It is shared for educational purposes only — never run these techniques against systems you do not own or have explicit authorization to test.
 
 ## Summary
